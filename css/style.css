@@ -7,16 +7,14 @@ html {
 }
 
 body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
   margin: 0;
-  background: #ccc;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-article {
-  width: 210mm;
-  height: 297mm;
-  margin: 20px auto;
-  position: relative;
-}
 
 address {
   position: absolute;
@@ -32,6 +30,7 @@ h1 {
   height: 128px;
   font-size: 20px;
   letter-spacing: 1px;
+  background: url('../img/logo.png') no-repeat center center;
   text-align: center;
   padding: 44px 0;
   color: white;
@@ -44,14 +43,90 @@ h1 {
   position: relative;
   width: 800px;
   height: 1200px;
+  font-family: 'Georgia', serif;
   margin: 0 auto;
   padding: 50px;
-  background: 
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.6) 100%),
-      url('../img/top-image.png') no-repeat top center,
-      url('../img/bottom-image.png') no-repeat bottom center;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.6) 100%),
+    url('../img/top-image.png') no-repeat top center,
+    url('../img/bottom-image.png') no-repeat bottom center;
   background-size: 100% auto, 100% auto;
   color: #333;
   font-family: Arial, sans-serif;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  left: 0;
+  line-height: 200px;
+  margin-top: -475px;
+  position: absolute;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  font-size: 40px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.header-space {
+  height: 225px;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-family: 'Georgia', serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 2px solid transparent;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.box-wrapper {
+  display: flex;
+  left: 0px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+}
+
+p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive for mobile screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }

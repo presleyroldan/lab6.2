@@ -7,11 +7,67 @@
   <title>Fancy letterheaded paper</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <div class="letter">
     <article>
       <h1>Awesome<br>Company</h1>
+      <h2>Lorem Ipsum</h2>
+      <div class="header-space">
+        <!-- Simulated header/logo space -->
+      </div>
 
+      <div class="container">
+        <div class="column">
+          <h3>What is Lorem Ipsum?</h3>
+          <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s...</p>
+
+          <h3>Where does it come from?</h3>
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC...</p>
+        </div>
+
+        <div class="column">
+          <h3>Why do we use it?</h3>
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at its layout...</p>
+
+          <h3>Where can I get some?</h3>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+            in some form...</p>
+          <div class="container">
+            <form id="selectionForm">
+              <label><input type="radio" name="choice" value="Jokic"> Jokic</label>
+              <label><input type="radio" name="choice" value="Luka"> Lukaaa</label>
+              <label><input type="radio" name="choice" value="Lebron"> Lebron</label>
+              <label><input type="radio" name="choice" value="Curry"> Curry</label>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              document.getElementById('selectionForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const radios = document.getElementsByName('choice');
+                let selectedValue = null;
+                for (let i = 0; i < radios.length; i++) {
+                  if (radios[i].checked) {
+                    selectedValue = radios[i].value;
+                    break;
+                  }
+                }
+                if (selectedValue) {
+                  alert(`You selected: ${selectedValue}`);
+                } else {
+                  alert('Please select an option before submitting!');
+                }
+              });
+            });
+          </script>
+        </div>
+      </div>
       <address>
         <p>The Awesome Company</p>
         <p>102-112 Frail Bend Bridge<br>
@@ -22,6 +78,7 @@
       </address>
     </article>
   </div>
+
 
 </body>
 
